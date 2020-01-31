@@ -2,7 +2,14 @@
 
 ## Motivation
 
-To make it easy to print out text in color.
+To make it easy and elegant to print out text in color.
+
+## Quick Start
+
+```sh
+$ gcc -Wall main.c && ./a.out
+$ g++ -Wall main.cpp && ./a.out
+```
 
 ## Example in C
 

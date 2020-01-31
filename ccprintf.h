@@ -6,9 +6,6 @@
 #include <iostream>
 #endif
 
-namespace cc // colorized characters
-{
-
 #define COLOR_NORMAL  "\x1B[0m"
 #define COLOR_RED     "\x1B[31m"
 #define COLOR_GREEN   "\x1B[32m"
@@ -19,6 +16,8 @@ namespace cc // colorized characters
 #define COLOR_WHITE   "\x1B[37m"
 
 #ifdef __cplusplus
+namespace cc // colorized characters
+{
 	class normal_t {}; void normal (normal_t ) { }
 	class red_t    {}; void red    (red_t    ) { }
 	class green_t  {}; void green  (green_t  ) { }
@@ -35,5 +34,5 @@ namespace cc // colorized characters
 	std::ostream& operator << (std::ostream& os, void(*)(magenta_t)) { return (os << COLOR_MAGENTA); }
 	std::ostream& operator << (std::ostream& os, void(*)(cyan_t   )) { return (os << COLOR_CYAN   ); }
 	std::ostream& operator << (std::ostream& os, void(*)(white_t  )) { return (os << COLOR_WHITE  ); }
-#endif
 }
+#endif
